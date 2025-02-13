@@ -26,7 +26,7 @@ simple_PDP<- function(df_don, names.CV, names.NCV, names.ZC, names_weights, grid
 
   #Check the dimension of input
   if(length(input)!=1 && length(input)!=2)
-    stop("BEAMM.statMatch :: input should include one or two variables")
+    stop("BEAMM.KCCAACCA :: input should include one or two variables")
 
   weights2 <- as.vector(df_don[[names_weights]])
 
@@ -160,6 +160,6 @@ simple_PDP<- function(df_don, names.CV, names.NCV, names.ZC, names_weights, grid
             theme_bw()
           }
 
-    }else stop("BEAMM.statMatch :: input should include one or two variables")
+    }else stop("BEAMM.KCCAACCA :: input should include one or two variables")
 
 }

@@ -1,11 +1,11 @@
-#' BEAMM.statMatch-package
+#' BEAMM.KCCAACCA-package
 #'
-#' The BEAMM.statMatch package provides ...
+#' The BEAMM.KCCAACCA package provides ...
 #'
-#' @section BEAMM.statMatch functions:
-#' The BEAMM.statMatch functions ...
+#' @section BEAMM.KCCAACCA functions:
+#' The BEAMM.KCCAACCA functions ...
 #'
 #' @docType package
-#' @name BEAMM.statMatch-package
-#' @useDynLib BEAMM.statMatch, .registration=TRUE
+#' @name BEAMM.KCCAACCA-package
+#' @useDynLib BEAMM.KCCAACCA, .registration=TRUE
 NULL

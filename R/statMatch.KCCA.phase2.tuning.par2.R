@@ -33,7 +33,7 @@ statMatch.KCCA.phase2.tuning.par2 <- function(df.don, names.CV, names.NCV, don.w
     # c("input","opts","fit", "fit_KCCA"),
     .combine = rbind,
     .inorder = TRUE,
-    .packages = c("BEAMM.statMatch")
+    .packages = c("BEAMM.KCCAACCA")
   ) %dopar% {
     results2 <- results[(opts$P2$n_h * (j - 1) + 1):(opts$P2$n_h * (j)), ]
     fit <- list()

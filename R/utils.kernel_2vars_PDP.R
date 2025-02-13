@@ -42,7 +42,7 @@ kernel_2vars_PDP <-
            res = NULL) {
     #Check the dimension of input
     if (length(input) != 2)
-      stop("BEAMM.statMatch :: input should include two variables")
+      stop("BEAMM.KCCAACCA :: input should include two variables")
     if (is.null(names_weights)) {
       weights2 <- matrix(1, ncol = 1, nrow = nrow(df_don))
     } else{

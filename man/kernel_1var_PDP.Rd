@@ -48,5 +48,5 @@ kernel_1var_PDP(
 A plot, ...
 }
 \description{
-Plot partial dependence plot for one variable with kernel
+Plot partial dependence plot for one variable with kernel optimized by operating only with matrices
 }

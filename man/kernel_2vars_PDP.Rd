@@ -6,10 +6,11 @@
 \usage{
 kernel_2vars_PDP(
   df_don,
+  h_final = NULL,
   num_of_h = 10,
   h_min = 0.5,
   names.CV,
-  names.NCV,
+  names.NCV = NULL,
   names.ZC,
   names_weights,
   grid_point,
@@ -22,6 +23,8 @@ kernel_2vars_PDP(
 }
 \arguments{
 \item{df_don}{a data.frame}
+
+\item{h_final}{preset value for h instead of tuning}
 
 \item{num_of_h}{number of h for tuning part}
 

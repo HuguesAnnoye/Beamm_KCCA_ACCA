@@ -1,6 +1,6 @@
 #' @title Predict for CCA and KCCA
 #' @description Do prediction
-#' @param W_keep a matrix containing the kernel product BEAMM.statMatch.KCCA.predict3
+#' @param W_keep a matrix containing the kernel product BEAMM.KCCAACCA.KCCA.predict3
 #' @param Z a matrix with the non-common variables in data set 1
 #' @param d a positive integer, number of latent variable used in CCA.
 #' @param weights a vector of individual weights

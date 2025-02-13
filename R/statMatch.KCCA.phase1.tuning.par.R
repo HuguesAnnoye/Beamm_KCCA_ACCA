@@ -48,10 +48,10 @@ statMatch.KCCA.phase1.tuning.par <- function(df.don, names.CV, names.NCV, don.we
     PRED.raw <- NULL
     cl <- makeCluster(opts$nc, outfile = "")
     # cl <- makeCluster(nc, setup_strategy = "sequential")#
-    # clusterExport(cl, varlist = c("BEAMM.statMatch.CCA.fit", "BEAMM.statMatch.CCA.predict", "kccaw", "gauss3d", "gausskcca", "weighted.sd")) # , env=environment())
+    # clusterExport(cl, varlist = c("BEAMM.KCCAACCA.CCA.fit", "BEAMM.KCCAACCA.CCA.predict", "kccaw", "gauss3d", "gausskcca", "weighted.sd")) # , env=environment())
     registerDoParallel(cl)
     #for (fold in seq_len(opts$n_fold)) {
-    res_fold <- foreach(fold = seq_len(opts$n_fold),.export=c("input","opts","fit", "fit_KCCA"), .packages = c("BEAMM.statMatch")) %dopar% {
+    res_fold <- foreach(fold = seq_len(opts$n_fold),.export=c("input","opts","fit", "fit_KCCA"), .packages = c("BEAMM.KCCAACCA")) %dopar% {
 
       message(Sys.time(), ". Combination ", i, " of ", n_combs_new, ". Fold ", fold, " of ", opts$n_fold)
       if (fit_KCCA) {

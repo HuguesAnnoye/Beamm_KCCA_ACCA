@@ -1,4 +1,4 @@
 library(testthat)
-library(BEAMM.statMatch)
+library(BEAMM.KCCAACCA)
 
-test_check("BEAMM.statMatch")
+test_check("BEAMM.KCCAACCA")

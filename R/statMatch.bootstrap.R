@@ -42,8 +42,8 @@ statMatch.bootstrap <- function(df.rec,
   }
   cl <- makeCluster(n_cores, outfile = "")
   registerDoParallel(cl)
-  # out_boot <- foreach(fold = 1:boot_fold,.combine=list, .packages = c("kernlab", "Hmisc", "MFAg","BEAMM.statMatch")) %dopar% {
-  out_boot <- foreach(fold = 1:boot_fold, .packages = c("kernlab", "Hmisc", "BEAMM.statMatch")) %dopar% {
+  # out_boot <- foreach(fold = 1:boot_fold,.combine=list, .packages = c("kernlab", "Hmisc", "MFAg","BEAMM.KCCAACCA")) %dopar% {
+  out_boot <- foreach(fold = 1:boot_fold, .packages = c("kernlab", "Hmisc", "BEAMM.KCCAACCA")) %dopar% {
     n_b <- sample(nrow(df.don), length_boot, replace = TRUE, prob = don.weights)
     df.don_b <- df.don[n_b, ]
     if (is.null(don.weights)) {
@@ -51,7 +51,7 @@ statMatch.bootstrap <- function(df.rec,
     } else {
       weights_b <- NULL
     } # don.weights[n_b]}
-    # out_res <-BEAMM.statMatch.CCAorKCCA(df.rec,df.don_b,
+    # out_res <-BEAMM.KCCAACCA.CCAorKCCA(df.rec,df.don_b,
     out_res <- statMatch(df.rec = df.rec,
                          df.don = df.don_b,
       don.weights = weights_b,

@@ -17,7 +17,10 @@ statMatch.KCCA.one.phase.options(
   par = FALSE,
   par_fold = FALSE,
   nc = 2L,
-  d = 2L,
+  d = NULL,
+  p0_dmax = 2L,
+  p0_dmin = 2L,
+  p0_dstep = 2L,
   rot = FALSE,
   p0_kernel_predict = c("gauss", "alea", "epan"),
   p0_kernel_predict_cat = c("alea", "epan", "gauss"),
@@ -68,6 +71,12 @@ statMatch.KCCA.one.phase.options(
 \item{nc}{a positive integer, number of core to use during the tuning phase}
 
 \item{d}{a positive integer, number of latent variable used in CCA.}
+
+\item{p0_dmax}{a positive integer, number of latent variable used in CCA.}
+
+\item{p0_dmin}{a positive integer, number of latent variable used in CCA.}
+
+\item{p0_dstep}{a positive integer, number of latent variable used in CCA.}
 
 \item{rot}{a logical, if TRUE the bandwidth is h multiply by the variance.}
 

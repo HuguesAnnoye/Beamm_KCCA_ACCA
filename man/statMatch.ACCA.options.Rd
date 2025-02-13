@@ -8,7 +8,13 @@ statMatch.ACCA.options(
   print.details = TRUE,
   scaling = c("z-score", "min-max", "no"),
   tuning_type = c("random"),
-  d = 2L,
+  d = NULL,
+  p1_dmax = 2L,
+  p1_dmin = 2L,
+  p1_dstep = 2L,
+  p2_dmax = 2L,
+  p2_dmin = 2L,
+  p2_dstep = 2L,
   p1_lat_X_min = 5L,
   p1_lat_X_max = 10L,
   p1_lat_X_step = 1L,
@@ -69,6 +75,18 @@ statMatch.ACCA.options(
 \item{tuning_type}{a character string, the method used to find the optimal tuning parameters: \code{"random"} search only.}
 
 \item{d}{a positive integer, number of latent variable used in CCA.}
+
+\item{p1_dmax}{a positive integer, number of latent variable used in CCA.}
+
+\item{p1_dmin}{a positive integer, number of latent variable used in CCA.}
+
+\item{p1_dstep}{a positive integer, number of latent variable used in CCA.}
+
+\item{p2_dmax}{a positive integer, number of latent variable used in CCA.}
+
+\item{p2_dmin}{a positive integer, number of latent variable used in CCA.}
+
+\item{p2_dstep}{a positive integer, number of latent variable used in CCA.}
 
 \item{p1_lat_X_min}{a positive integer, minimum size of the latent space of the common variables in phase 1.}
 

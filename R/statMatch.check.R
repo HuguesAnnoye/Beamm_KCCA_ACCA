@@ -1,46 +1,46 @@
 statMatch.check <- function(df.rec, df.don, names.CV, names.NCV){
 
   if (!is.data.frame(df.rec))
-    stop("BEAMM.statMatch :: input 'df.rec' should be a data.frame")
+    stop("BEAMM.KCCAACCA :: input 'df.rec' should be a data.frame")
 
   if (!is.data.frame(df.don))
-    stop("BEAMM.statMatch :: input 'df.don' should be a data.frame")
+    stop("BEAMM.KCCAACCA :: input 'df.don' should be a data.frame")
 
   if (length(intersect(colnames(df.rec), colnames(df.don))) == 0)
-    stop("BEAMM.statMatch :: 'df.rec' and 'df.don' do not have any variable in common.
+    stop("BEAMM.KCCAACCA :: 'df.rec' and 'df.don' do not have any variable in common.
          Statistical matching cannot be performed without common variables.")
 
   if (length(intersect(names.CV, names.NCV)) > 0)
-    stop("BEAMM.statMatch :: the following variables cannot be specified in both
+    stop("BEAMM.KCCAACCA :: the following variables cannot be specified in both
          names.CV and names.NCV : ", paste(intersect(names.CV, names.NCV),collapse = ", "),".")
 
   if (!is.null(names.CV)){
     if (!is.character(names.CV))
-      stop("BEAMM.statMatch :: input 'names.CV' should be a character vector")
+      stop("BEAMM.KCCAACCA :: input 'names.CV' should be a character vector")
     wrong.CV.rec <- !names.CV %in% colnames(df.rec)
     if (any(wrong.CV.rec))
-      stop("BEAMM.statMatch :: the following common variable(s) are not available in 'df.rec' : ",
+      stop("BEAMM.KCCAACCA :: the following common variable(s) are not available in 'df.rec' : ",
            paste(names.CV[wrong.CV.rec],collapse = ", "),".")
     wrong.CV.don <- !names.CV %in% colnames(df.don)
     if (any(wrong.CV.don))
-      stop("BEAMM.statMatch :: the following common variable(s) are not available in 'df.don' : ",
+      stop("BEAMM.KCCAACCA :: the following common variable(s) are not available in 'df.don' : ",
            paste(names.CV[wrong.CV.don],collapse = ", "),".")
   }
 
   if (!is.null(names.NCV)){
     if (!is.character(names.NCV))
-      stop("BEAMM.statMatch :: input 'names.NCV' should be a character vector")
+      stop("BEAMM.KCCAACCA :: input 'names.NCV' should be a character vector")
     wrong.NCV.don <- names.NCV[!names.NCV %in% colnames(df.don)]
     if (length(wrong.NCV.don)>0)
-      stop("BEAMM.statMatch :: the following non-common variable(s) are not available in 'df.don' : ",
+      stop("BEAMM.KCCAACCA :: the following non-common variable(s) are not available in 'df.don' : ",
            paste(wrong.NCV.don,collapse = ", "),".")
   }
 
   for (varname in names.CV){
     if (class(df.don[, varname, drop = T]) != class(df.rec[, varname, drop = T]))
-      stop("BEAMM.statMatch :: the class of variable ", varname, " is different in df.rec and df.don.")
+      stop("BEAMM.KCCAACCA :: the class of variable ", varname, " is different in df.rec and df.don.")
     if (!setequal(levels(df.don[, varname, drop = T]), levels(df.rec[, varname, drop = T])))
-      stop("BEAMM.statMatch :: the levels of the factor variable ", varname, " are different in df.rec and df.don.")
+      stop("BEAMM.KCCAACCA :: the levels of the factor variable ", varname, " are different in df.rec and df.don.")
   }
 
 }

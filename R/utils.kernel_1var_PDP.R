@@ -26,7 +26,7 @@ kernel_1var_PDP <- function(df_don, num_of_h = 10, h_min=0.5, names.CV, names.NC
 
   #Check the dimension of input
   if(length(input)!=1)
-    stop("BEAMM.statMatch :: input should include one variable")
+    stop("BEAMM.KCCAACCA :: input should include one variable")
 
   weights2 <- df_don[[names_weights]]
 

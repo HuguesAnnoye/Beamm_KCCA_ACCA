@@ -13,7 +13,13 @@ statMatch.PCA.options(
   exactMatch = FALSE,
   names.CV_Cat_prio = NULL,
   n_fold = 5L,
-  d = 2L,
+  d = NULL,
+  p1_dmax = 2L,
+  p1_dmin = 2L,
+  p1_dstep = 2L,
+  p2_dmax = 2L,
+  p2_dmin = 2L,
+  p2_dstep = 2L,
   rot = FALSE,
   p1_kernel_predict = c("alea", "epan", "gauss"),
   p1_kernel_predict_tuning = NULL,
@@ -64,6 +70,18 @@ statMatch.PCA.options(
 \item{n_fold}{a positive integer, number of folds used for the cross-validation of the tuning parameters.}
 
 \item{d}{a positive integer, number of latent variable used in CCA.}
+
+\item{p1_dmax}{a positive integer, number of latent variable used in CCA.}
+
+\item{p1_dmin}{a positive integer, number of latent variable used in CCA.}
+
+\item{p1_dstep}{a positive integer, number of latent variable used in CCA.}
+
+\item{p2_dmax}{a positive integer, number of latent variable used in CCA.}
+
+\item{p2_dmin}{a positive integer, number of latent variable used in CCA.}
+
+\item{p2_dstep}{a positive integer, number of latent variable used in CCA.}
 
 \item{rot}{a logical, if TRUE the bandwidth is h multiply by the variance.}
 
