@@ -1,0 +1,53 @@
+Package: BEAMM.statMatch
+Type: Package
+Title: The R package containing the routines to perform statistical matching
+Version: 0.1.0
+Authors@R: c(person(given = "Alessandro",
+                    family = "Beretta", 
+                    email = "alessandro.beretta@usaintlouis.be", 
+                    role = c("aut", "cre")),
+             person(given = "Hugues",
+                    family = "Annoye", 
+                    email = "hugues.annoye@uclouvain.be", 
+                    role = c("aut")),
+             person(given = "Ida-Marie",
+                    family = "Jensen", 
+                    email = "ida-marie.jensen@usaintlouis.be", 
+                    role = c("aut")))
+Description: R routines for statistical matching based on KCCA, SuperOM and A-CCA.
+License: ?
+Encoding: UTF-8
+Depends: R (>= 4.4)
+Imports: 
+    dplyr,
+    kohonenBEAMM, 
+    doParallel,
+    foreach,
+    parallel,
+    Hmisc,
+    methods,
+    kernlab,
+    stringr,
+    magrittr,
+    stats,
+    RSpectra,
+    caret,
+    keras,
+    tensorflow,
+    tidyverse,
+    reshape,
+    tidyr,
+    bivariate,
+    rlang,
+    pracma,
+    plotly,
+    ggplot2,
+    readr
+LinkingTo: Rcpp, RcppArmadillo
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+LazyData: TRUE
+RoxygenNote: 7.1.1
+VignetteBuilder: knitr
