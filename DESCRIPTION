@@ -1,4 +1,4 @@
-Package: BEAMM.statMatch
+Package: BEAMM.KCCAACCA
 Type: Package
 Title: The R package containing the routines to perform statistical matching
 Version: 0.1.0
@@ -9,6 +9,10 @@ Authors@R: c(person(given = "Alessandro",
              person(given = "Hugues",
                     family = "Annoye", 
                     email = "hugues.annoye@uclouvain.be", 
+                    role = c("aut")),
+             person(given = "Cedric",
+                    family = "Heuchenne", 
+                    email = "cedric.heuchenne@uclouvain.be", 
                     role = c("aut")),
              person(given = "Ida-Marie",
                     family = "Jensen", 
